@@ -1,0 +1,25 @@
+{
+  "name": "ejemplo-clean-cliente",
+  "version": "1.0.0",
+  "description": "Ejemplo base de servidor Express con TypeScript y estructura Clean",
+  "main": "dist/04-infrastructure/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/04-infrastructure/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/04-infrastructure/server.js",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.3"
+  }
+}
