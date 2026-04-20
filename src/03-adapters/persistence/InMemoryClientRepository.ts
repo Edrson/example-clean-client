@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import { ClientRepository } from "../../01-domain/interfaces/ClientRepository";
 import { Client } from "../../01-domain/entities/Client";
 import { IdGenerator } from "../../01-domain/interfaces/IdGenerator";
