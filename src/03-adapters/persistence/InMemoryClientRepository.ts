@@ -11,6 +11,7 @@ export class InMemoryClientRepository implements ClientRepository {
     console.log(`Client with ID ${id} saved, for moment in memory.`);
     console.log("New client added: ", client);
     console.log("End -----------------------");
+    console.log("Current clients in memory: ", "***CONTEO*** ", this.clients.size, "\n", Array.from(this.clients.entries()));
   }
 }
 
