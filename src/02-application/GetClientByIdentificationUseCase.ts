@@ -30,7 +30,7 @@ export class GetClientByIdentificationUseCase {
       fullName: client.client.fullName,
       identificationNumber: client.client.identificationNumber,
       email: client.client.email.getValue(),
-      birthDate: client.client.birthDate.toISOString().split('T')[0],
+      birthDate: client.client.birthDate.toISOString().split("T")[0],
       gender: client.client.gender,
       civilStatus: client.client.civilStatus,
     };
