@@ -8,6 +8,7 @@ export class InMemoryClientRepository implements ClientRepository {
 
   async save(id: string, client: Client): Promise<void> {
     this.clients.set(id, client);
+    console.log("Inicio de log de registros");
     console.log(`Client with ID ${id} saved, for moment in memory.`);
     console.log("New client added: ", client);
     console.log("End -----------------------");
