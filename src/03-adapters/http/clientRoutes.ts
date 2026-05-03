@@ -4,5 +4,6 @@ export function createClientRoutes(clientController: ClientController): Router {
   const router = Router();
   //router.post("/clients", (req, res) => clientController.createClient(req, res));
   router.post("/clients", clientController.createClient.bind(clientController));
+  router.get("/clients/:identificationNumber", clientController.getClientByIdentification.bind(clientController));
   return router;
 }
