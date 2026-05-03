@@ -14,6 +14,15 @@ export class InMemoryClientRepository implements ClientRepository {
     console.log("End -----------------------");
     console.log("Current clients in memory: ", "***CONTEO*** ", this.clients.size, "\n", Array.from(this.clients.entries()));
   }
+
+  async findByIdentificationNumber(identificationNumber: string): Promise<{ id: string; client: Client } | null> {
+    for (const [id, client] of this.clients.entries()) {
+      if (client.identificationNumber === identificationNumber) {
+        return { id, client };
+      }
+    }
+    return null;
+  }
 }
 
 export class UuidIdGenerator implements IdGenerator {
